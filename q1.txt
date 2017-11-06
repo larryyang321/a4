@@ -1,0 +1,23 @@
+a> without O2
+	without DSTR
+	2.35u 0.29s 0:02.66
+	
+	with DSTR
+	6.40u 0.24s 0:06.65
+with O2
+	without DSTR
+	2.24u 0.22s 0:02.47
+	
+	with DSTR
+	4.38u 0.25s 0:04.63
+
+b>
+from the result, we can see that external data buffer is 3 times(no o2) fater than internal data buffer
+
+
+i think the reason is, the internal data buffer locate memory on stack and every time we want a data from
+buffer we have to do linear search on stack when we store them and output them (cout too many times)
+but external data buffer have its own location and we do not need do linear search, we can just output as together(cout once)
+
+c> after compiler with optimization turned on, internal data buffer get fater but still slower than external data buffer
+and external data buffer remain same
