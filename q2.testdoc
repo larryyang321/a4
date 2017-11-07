@@ -1,0 +1,183 @@
+Q2 TEST DOCUMENTATION
+=========================
+This program tallies votes across multiple tasks in varying group sizes.
+
+USER INTERRFACE TESTING
+    There is no user interface to be tested, so the testing focuses solely on
+    the algorithm used for the conversion.
+
+ALGORITHM TESTING
+
+first test with group number is 1
+
+MC
+
+
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+			C			
+			F s	S		
+				V 2,0,1		
+				C		
+	S			F p		
+	V 1,0,2					
+	C					
+	F g	S				
+		V 0,2,1				
+		C				
+S		F s				
+V 0,2,1						
+C						
+F s					S	
+					V 2,0,1	
+					C	
+					F p	
+*****************
+All tours started
+
+with Bar
+
+
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+			C			
+			F s	S		
+				V 2,0,1		
+				C		
+	S			F p		
+	V 1,0,2					
+	C					
+	F g	S				
+		V 0,2,1				
+		C				
+S		F s				
+V 0,2,1						
+C						
+F s					S	
+					V 2,0,1	
+					C	
+					F p	
+*****************
+All tours started
+
+with SEM
+
+
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+			C			
+			F s	S		
+				b		
+				V 2,0,1		
+				C		
+	S			F p		
+	b					
+	V 1,0,2					
+	C					
+	F g	S				
+		b				
+		V 0,2,1				
+		C				
+S		F s				
+b						
+V 0,2,1						
+C						
+F s					S	
+					b	
+					V 2,0,1	
+					C	
+					F p	
+*****************
+All tours started
+
+all same
+
+with more number on group
+
+with MC
+
+
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+			B 1	S		
+				V 2,0,1		
+	S			B 2		
+	V 1,0,2					
+	C					
+S	F g	S	U 1			
+b		b	F g	U 0	S	
+		V 0,2,1		F g	b	
+V 0,2,1		B 1				
+B 2					V 2,0,1	
+					C	
+		U 1			F s	
+U 0		F s				
+F s						
+*****************
+All tours started
+
+b occured correctly
+
+with BAR
+
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+			B 1	S		
+				V 2,0,1		
+	S			B 2		
+	V 1,0,2					
+	C					
+S	F g	S		U 1		
+			U 0	F g	S	
+		V 0,2,1	F g			
+V 0,2,1		B 1				
+B 2					V 2,0,1	
+					C	
+U 1					F s	
+F s		U 0				
+		F s				
+*****************
+All tours started
+
+with SEM
+
+				
+V1	V2	V3	V4	V5	V6	
+*******	*******	*******	*******	*******	*******	
+			S			
+			V 0,2,1			
+0
+			B 1	S		
+				V 2,0,1		
+0
+	S			B 2		
+	V 1,0,2					
+	C					
+	F g	S				
+S		b				
+b				U 1		
+				F g	S	
+			U 0		b	
+		V 0,2,1	F g			
+2
+V 0,2,1		B 1				
+1
+B 2					V 2,0,1	
+					C	
+U 1					F s	
+F s		U 0				
+		F s				
+*****************
+All tours started
+
+all correct

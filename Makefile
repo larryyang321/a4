@@ -1,11 +1,11 @@
-TYPE:=MC
+TYPE:=SEM
 OPT:=-O2
 
 CXX = u++					# compiler
 CXXFLAGS = -g -Wall ${OPT} -multi -MMD -std=c++11 -DIMPLTYPE_${TYPE} # compiler flags
 MAKEFILE_NAME = ${firstword ${MAKEFILE_LIST}}	# makefile name
 
-OBJECTS2 = q2tallyVotes${TYPE}.o # list of object files for question 1 prefixed with "q2"
+OBJECTS2 =  q2main.o q2.o  # list of object files for question 1 prefixed with "q2"
 EXEC2 = vote
 
 OBJECTS = ${OBJECTS2}				# all object files
