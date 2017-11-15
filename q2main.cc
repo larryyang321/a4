@@ -12,6 +12,11 @@ void Printer::print( unsigned int id, Voter::States state, TallyVotes::Tour tour
     void Printer::print( unsigned int id, Voter::States state, unsigned int numBlocked ){}
 
 */
+void usage(){
+
+	cout<<"Usage: ./voteBAR.txt  Voters (> 0 & V mod G = 0, default 6)  Group (> 0, default 3)  Seed (> 0)"<<endl;
+	exit(-1);
+}
 void uMain::main(){
 	int V = 6;
 	int G = 3;
@@ -23,26 +28,29 @@ void uMain::main(){
 
 				seed = stoi(argv[3]);
 			}catch(invalid_argument& e){
-				exit(-1);
+				usage();
 			}
+			if(seed <=0)usage();
 		case 3:		
 			try{
 
                                 G = stoi(argv[2]);
                         }catch(invalid_argument& e){
-                                exit(-1);
+                                usage();
                         }
+			if(G<= 0)usage();
 		case 2:
 			try{
 
                                V = stoi(argv[1]);
                         }catch(invalid_argument& e){
-                                exit(-1);
+                                usage();
                         }
+			if(V<=0) usage();
 		default:
 			break;
 	}
-	if((V%G) != 0)exit(-1);
+	if((V%G) != 0)usage();
 	
 	mprng.set_seed(seed);
 	Printer p(V);
